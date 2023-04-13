@@ -126,3 +126,6 @@ animation = "moviment"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 77.5, 76.5 )
 shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collide_with_areas = true
