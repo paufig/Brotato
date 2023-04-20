@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 var desplacament = Vector2(0,0)
 var moviment = Vector2(0,0)
+var vida = 100 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,5 +30,12 @@ func _process(delta):
 	moviment = move_and_slide(moviment)
 	
 
+func damage_player (damage):
+	vida -= damage 
+	$ProgressBar.value = vida
+	
 
-
+func _on_Hurtbox_area_entered(area):
+	if area.get_parent().is_in_group("enemy"):
+		damage_player(area.get_parent().damage)
+	pass # Replace with function body.

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://marc.png" type="Texture" id=1]
+[ext_resource path="res://vermell.png" type="Texture" id=2]
+[ext_resource path="res://image.png" type="Texture" id=3]
+[ext_resource path="res://barrasalud.gd" type="Script" id=4]
+
+[node name="barrasalud" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_right = 0.468
+margin_left = 12.0
+margin_top = 25.0
+margin_right = 309.0
+margin_bottom = 65.0
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 1 )
+texture_progress = ExtResource( 3 )

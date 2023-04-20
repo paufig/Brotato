@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/personatgeprincipal.png-7b00c8a79ebb9df6c4dd7490782f1b0a.stex"
+path="res://.import/marc.png-c1613107f0b8c36615a092cc1cf0edfb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personatgeprincipal.png"
-dest_files=[ "res://.import/personatgeprincipal.png-7b00c8a79ebb9df6c4dd7490782f1b0a.stex" ]
+source_file="res://marc.png"
+dest_files=[ "res://.import/marc.png-c1613107f0b8c36615a092cc1cf0edfb.stex" ]
 
 [params]
 
