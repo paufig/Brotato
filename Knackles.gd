@@ -9,6 +9,7 @@ var moviment = Vector2.ZERO
 var timer 
 var puede_disparar = true
 var apuntar = Vector2()
+var vida = 100
 
 func _ready(): 
 	timer = Timer.new()
@@ -50,3 +51,10 @@ func _cooldown_finish():
 	puede_disparar = true
 
 
+func damage_player (damage):
+	vida -= damage 
+	
+
+func _on_Hurbox_area_entered(area):
+	if area.get_parent().is_in_group("enemy"):
+		damage_player(area.get_parent().damage)

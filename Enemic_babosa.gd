@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+export var damage = 10
 onready var knackles = get_tree().get_root().get_node("Node2D/knackles")
 var move = Vector2()
 var vel = 40
