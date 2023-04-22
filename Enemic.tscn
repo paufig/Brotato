@@ -116,24 +116,27 @@ animations = [ {
 extents = Vector2( 10.5, 10.5 )
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 13, 11.5 )
+extents = Vector2( 9.57122, 9.93185 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 77, 75 )
+position = Vector2( -3, -0.999993 )
 scale = Vector2( 0.909091, 0.774194 )
 frames = SubResource( 10 )
 animation = "moviment"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 77.5, 76.5 )
+position = Vector2( -2.5, 0.500007 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+rotation = 0.00714651
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 77, 76.5 )
+position = Vector2( -2.49994, 0.0178662 )
 shape = SubResource( 21 )
