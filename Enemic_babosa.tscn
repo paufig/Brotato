@@ -112,7 +112,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=33]
-radius = 12.0416
+radius = 12.1655
 
 [node name="Enemic_babosa" type="KinematicBody2D"]
 collision_layer = 2
@@ -136,5 +136,4 @@ position = Vector2( 0, 1 )
 position = Vector2( 0, 7.62939e-06 )
 shape = SubResource( 33 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

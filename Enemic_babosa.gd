@@ -10,13 +10,10 @@ func _physics_process(delta):
 	move = move_and_slide(move * vel)
 	
 	if vida == 0:
-		visible = false
+		position = Vector2(1000,1000)
 
 
-
-func _on_Area2D_body_entered(body):
-	vida = vida - 25
-	print("a")
-
-func _on_Area2D_body_exited(body):
-	print("b")
+func _on_Area2D_area_entered(area):
+	if area.name == "Area2D":
+		vida = vida - 25
+	print(area)  
