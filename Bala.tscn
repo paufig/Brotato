@@ -46,7 +46,7 @@ tracks/1/keys = {
 
 [node name="Bala" type="KinematicBody2D" parent="."]
 collision_layer = 4
-collision_mask = 6
+collision_mask = 4
 
 [node name="Sprite" type="Sprite" parent="Bala"]
 scale = Vector2( 0.00914635, 0.00933735 )
@@ -68,3 +68,5 @@ anims/anim = SubResource( 29 )
 position = Vector2( -3.8147e-06, -3.8147e-06 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 27 )
+
+[connection signal="body_entered" from="Bala/Area2D" to="Bala" method="_on_Area2D_body_entered"]
