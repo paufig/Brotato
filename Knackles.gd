@@ -1,6 +1,5 @@
 extends KinematicBody2D
-
-onready var enemic = get_node("/root/Node2D/Enemic_babosa")
+var enemic_proper 
 onready var preBullet = preload("res://Bala.tscn")
 onready var armas = get_node("Arma")
 export var cooldown = 2
@@ -34,8 +33,21 @@ func _physics_process(delta):
 	
 	moviment = desplacament.normalized() * vel
 	move_and_slide(moviment)
+	var distancia_enemic
 	
-	armas.look_at(enemic.position)
+	if enemic_proper == null or not is_instance_valid(enemic_proper):
+		distancia_enemic = 10000000000
+	else:
+		distancia_enemic = global_position.distance_squared_to(enemic_proper.global_position)
+	
+	for enemic in Global.Enemics.get_children():
+		var d = global_position.distance_squared_to(enemic.global_position)
+		if d < distancia_enemic:
+			distancia_enemic = d
+			enemic_proper = enemic
+	
+	if enemic_proper != null:
+		armas.look_at(enemic_proper.position)
 
 	
 	if puede_disparar == true:
