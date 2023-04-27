@@ -2,7 +2,7 @@ extends KinematicBody2D
 var enemic_proper 
 onready var preBullet = preload("res://Bala.tscn")
 onready var armas = get_node("Arma")
-export var cooldown = 2
+export var cooldown = 0.5
 var vel = 100
 var moviment = Vector2.ZERO
 var timer 

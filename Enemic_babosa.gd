@@ -3,7 +3,7 @@ export var damage = 10
 onready var knackles = get_tree().get_root().get_node("Node2D/knackles")
 var move = Vector2()
 var vel = 40
-var vida = 75
+var vida = 50
 
 func _physics_process(delta):
 	move = position.direction_to(knackles.global_position) 
