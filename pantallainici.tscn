@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://loading screen in 169 with the title sprouted and that at the bottom there is the to play and the option to exit the game.png" type="Texture" id=1]
+[ext_resource path="res://pantalla_inici.png" type="Texture" id=1]
 [ext_resource path="res://pantallainici.gd" type="Script" id=2]
 [ext_resource path="res://mapa.tscn" type="PackedScene" id=3]
 
