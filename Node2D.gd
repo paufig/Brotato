@@ -7,7 +7,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_TouchScreenButton_pressed():
-	$CanvasLayer/ColorRect.color(2,43,0)
+	pass
 
 func _on_TouchScreenButton2_pressed():
 	pass # Replace with function body.
@@ -17,4 +17,6 @@ func _process(delta):
 
 
 func _on_TextureButton_pressed():
-	pass
+	Global.max_vida += 10
+	$CanvasLayer/ColorRect.color = Color(2,43,0,5)
+	

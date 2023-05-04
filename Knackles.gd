@@ -8,9 +8,27 @@ var moviment = Vector2.ZERO
 var timer 
 var puede_disparar = true
 var apuntar = Vector2()
-var vida = 100
+var vida = 100 setget canvi_vida
 
-func _ready(): 
+onready var barra_vida = $barra_vida/TextureProgress
+
+func canvi_vida(nova_vida):
+	vida = nova_vida
+	
+	if vida <= 0:
+		mor()
+	
+	barra_vida.value = vida
+
+func mor():
+	pass
+
+func nou_nivell():
+	barra_vida.max_value = Global.max_vida
+	self.vida = Global.max_vida
+
+func _ready():
+	nou_nivell()
 	timer = Timer.new()
 	add_child(timer)
 	timer.set_one_shot(true)
