@@ -84,7 +84,7 @@ func _cooldown_finish():
 
 
 func damage_player (damage):
-	vida -= damage 
+	self.vida -= damage 
 	
 
 func _on_Hurbox_area_entered(area):
