@@ -126,7 +126,7 @@ script = ExtResource( 2 )
 position = Vector2( 0, 7.62939e-06 )
 scale = Vector2( 0.909091, 0.774194 )
 frames = SubResource( 32 )
-animation = "moviment"
+animation = "mort"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 33 )
@@ -136,4 +136,9 @@ shape = SubResource( 33 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_enemic"]
 shape = SubResource( 34 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
 [connection signal="area_entered" from="Area_enemic" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

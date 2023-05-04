@@ -20,6 +20,9 @@ func _ready():
 	
 	var screen_size = get_viewport().get_visible_rect().size
 	
+	
+	
+	
 func _process(delta):
 	
 	if spawn == true:
@@ -41,5 +44,6 @@ func _cooldown_finish():
 		spawn = true
 		
 func _cooldown_finish_nivell():
+	Global.nivell += 1
 	print("canvi!")
 	get_tree().change_scene("res://pantallainici.tscn")

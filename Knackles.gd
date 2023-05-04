@@ -2,7 +2,7 @@ extends KinematicBody2D
 var enemic_proper 
 onready var preBullet = preload("res://Bala.tscn")
 onready var armas = get_node("Arma")
-export var cooldown = 0.5
+var cooldown = Global.velocitat_arma
 var vel = 100
 var moviment = Vector2.ZERO
 var timer 
@@ -11,10 +11,13 @@ var apuntar = Vector2()
 var vida = 100 setget canvi_vida
 
 onready var barra_vida = $barra_vida/TextureProgress
+onready var tween = $barra_vida/Tween
+
 
 func canvi_vida(nova_vida):
+	tween.interpolate_property(barra_vida, "value", vida, nova_vida, 0.2)
 	vida = nova_vida
-	
+	tween.start()
 	if vida <= 0:
 		mor()
 	
@@ -85,6 +88,7 @@ func _cooldown_finish():
 
 func damage_player (damage):
 	self.vida -= damage 
+
 	
 
 func _on_Hurbox_area_entered(area):
