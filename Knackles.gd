@@ -3,7 +3,7 @@ var enemic_proper
 onready var preBullet = preload("res://Bala.tscn")
 onready var armas = get_node("Arma")
 var cooldown = Global.velocitat_arma
-var vel = 100
+var vel = Global.vel
 var moviment = Vector2.ZERO
 var timer 
 var puede_disparar = true

@@ -20,9 +20,26 @@ func _ready():
 	
 	var screen_size = get_viewport().get_visible_rect().size
 	
-	
-	
-	
+	if Global.nivell == 1:
+		vegades = 1
+	if Global.nivell == 2:
+		vegades = 2
+	if Global.nivell == 3:
+		vegades = 3
+	if Global.nivell == 4:
+		vegades = 4
+	if Global.nivell == 5:
+		vegades = 5
+	if Global.nivell == 6:
+		vegades = 6
+	if Global.nivell == 7:
+		vegades = 7
+	if Global.nivell == 8:
+		vegades = 8
+	if Global.nivell == 9:
+		vegades = 9
+	if Global.nivell == 10:
+		vegades = 10
 func _process(delta):
 	
 	if spawn == true:
