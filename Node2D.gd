@@ -6,11 +6,7 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func _on_TouchScreenButton_pressed():
-	pass
 
-func _on_TouchScreenButton2_pressed():
-	pass # Replace with function body.
 
 func _process(delta):
 	$stats_actuals/Label.text = "Vida: " + str(Global.max_vida)+ ", Damage: " + str(Global.damage) + ", Cadència: " + str(Global.velocitat_arma)
@@ -21,7 +17,12 @@ func _on_TextureButton_pressed():
 	#$CanvasLayer/ColorRect.color = Color(2,43,0,5)
 	
 func _on_damage_pressed():
+	
 	Global.damage += 2
 
 func _on_cadencia_pressed():
 	Global.velocitat_arma += 0.2 # Replace with function body.
+
+
+func _on_velocitat_pressed():
+	Global.velocitat += 10 # Replace with function body.
