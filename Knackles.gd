@@ -39,6 +39,7 @@ func _ready():
 	timer.connect("timeout",self, "_cooldown_finish")
 
 func _physics_process(delta):
+	$CanvasLayer/Label.text = str(Global.gemas)
 	var desplacament = Vector2.ZERO 
 	if Input.is_action_pressed("dreta"):
 		desplacament = Vector2.RIGHT
@@ -55,25 +56,25 @@ func _physics_process(delta):
 	moviment = desplacament.normalized() * vel
 	move_and_slide(moviment)
 	var distancia_enemic
-	
-	if enemic_proper == null or not is_instance_valid(enemic_proper):
-		distancia_enemic = 10000000000
-	else:
-		distancia_enemic = global_position.distance_squared_to(enemic_proper.global_position)
-	
-	for enemic in Global.Enemics.get_children():
-		var d = global_position.distance_squared_to(enemic.global_position)
-		if d < distancia_enemic:
-			distancia_enemic = d
-			enemic_proper = enemic
-	
-	if enemic_proper != null:
-		armas.look_at(enemic_proper.position)
+	if Global.stop == false:
+		if enemic_proper == null or not is_instance_valid(enemic_proper):
+			distancia_enemic = 10000000000
+		else:
+			distancia_enemic = global_position.distance_squared_to(enemic_proper.global_position)
+		
+		for enemic in Global.Enemics.get_children():
+			var d = global_position.distance_squared_to(enemic.global_position)
+			if d < distancia_enemic:
+				distancia_enemic = d
+				enemic_proper = enemic
+		
+		if enemic_proper != null:
+			armas.look_at(enemic_proper.position)
 
-	
-	if puede_disparar == true:
-		timer.start()
-		shoot()
+		
+		if puede_disparar == true:
+			timer.start()
+			shoot()
 		
 func shoot():
 	var bullet = preBullet.instance()

@@ -6,7 +6,7 @@ var rand = RandomNumberGenerator.new()
 var enemyscene = load("res://Enemic_babosa.tscn")
 var timer
 var screen_size 
-var cooldown = 5
+var cooldown = 6
 var spawn = true
 var vegades = 0
 var timer_nivell
@@ -61,6 +61,14 @@ func _cooldown_finish():
 		spawn = true
 		
 func _cooldown_finish_nivell():
+	Global.stop = true
 	Global.nivell += 1
-	print("canvi!")
+	for enemic in Global.Enemics.get_children():
+		enemic.mor()
+	$Final_nivell.start()
+	
+
+
+
+func _on_Final_nivell_timeout():
 	get_tree().change_scene("res://pantallainici.tscn")

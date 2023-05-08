@@ -9,3 +9,4 @@ var vida_enemics = 50
 var nivell = 1
 var gemas = 0
 var vel = 100
+var stop = false

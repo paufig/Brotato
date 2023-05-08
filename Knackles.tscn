@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://personatgeprincipal.png" type="Texture" id=1]
 [ext_resource path="res://Knackles.gd" type="Script" id=2]
 [ext_resource path="res://Armas.png" type="Texture" id=3]
 [ext_resource path="res://barravida2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://2-removebg-preview.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 13, 20 )
@@ -93,5 +94,18 @@ position = Vector2( -1, 2 )
 shape = SubResource( 27 )
 
 [node name="barra_vida" parent="." instance=ExtResource( 4 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 921, 31 )
+scale = Vector2( 0.205706, 0.195333 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 943.0
+margin_top = 15.0
+margin_right = 1004.0
+margin_bottom = 44.0
 
 [connection signal="area_entered" from="Hurbox" to="." method="_on_Hurbox_area_entered"]

@@ -54,6 +54,9 @@ func _on_Area2D_area_entered(area):
 		vida = vida - Global.damage
 		area.get_parent().get_parent().queue_free()
 	if vida <= 0:
+		mor()
+
+func mor():
 		stop = 1
 		$Timer.start()
 		Global.gemas += 1

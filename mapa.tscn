@@ -133,8 +133,9 @@ wait_time = 20.0
 one_shot = true
 autostart = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+[node name="Final_nivell" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_cooldown_finish_nivell"]
+[connection signal="timeout" from="Final_nivell" to="." method="_on_Final_nivell_timeout"]
