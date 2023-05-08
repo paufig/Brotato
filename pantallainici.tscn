@@ -25,14 +25,21 @@ margin_right = 144.6
 margin_bottom = 69.0
 text = ">"
 
-[node name="pos1" type="Position2D" parent="GUI"]
-position = Vector2( 112.4, 61.6 )
-scale = Vector2( 1.05, 1 )
+[node name="jugar" type="TextureButton" parent="GUI"]
+margin_left = 88.0
+margin_top = 38.0
+margin_right = 140.0
+margin_bottom = 45.0
 
-[node name="pos2" type="Position2D" parent="GUI"]
-position = Vector2( 105.4, 90.8 )
-scale = Vector2( 1.05, 1 )
+[node name="escriptori" type="TextureButton" parent="GUI"]
+margin_left = 85.0
+margin_top = 54.0
+margin_right = 142.0
+margin_bottom = 60.0
 
 [node name="LoadingScreenIn169WithTheTitleSproutedAndThatAtTheBottomThereIsTheToPlayAndTheOptionToExitTheGame" type="Sprite" parent="."]
 position = Vector2( 540, 248 )
 texture = ExtResource( 1 )
+
+[connection signal="pressed" from="GUI/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="GUI/escriptori" to="." method="_on_escriptori_pressed"]

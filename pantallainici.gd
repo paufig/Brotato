@@ -20,3 +20,11 @@ func _process(delta):
 		get_tree().change_scene_to(scn_game)
 	if (Input.is_action_just_pressed("enter")) and ($GUI/cursor.rect_position == $GUI/pos2.position):
 		get_tree().quit()
+
+
+func _on_jugar_pressed():
+	get_tree().change_scene_to(scn_game)
+
+
+func _on_escriptori_pressed():
+	get_tree().quit()

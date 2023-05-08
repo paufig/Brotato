@@ -14,7 +14,7 @@ margin_top = 609.0
 margin_right = 362.0
 margin_bottom = 753.0
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="vidaactual" type="Label" parent="CanvasLayer"]
 margin_left = 101.0
 margin_top = 512.0
 margin_right = 361.0
@@ -29,7 +29,7 @@ margin_top = 611.0
 margin_right = 746.0
 margin_bottom = 755.0
 
-[node name="Label" type="Label" parent="CanvasLayer2"]
+[node name="damageactual" type="Label" parent="CanvasLayer2"]
 margin_left = 476.0
 margin_top = 523.0
 margin_right = 748.0
@@ -44,20 +44,20 @@ margin_top = 611.0
 margin_right = 1525.0
 margin_bottom = 757.0
 
-[node name="Label" type="Label" parent="CanvasLayer3"]
+[node name="cadenciaactual" type="Label" parent="CanvasLayer3"]
 margin_left = 876.0
 margin_top = 532.0
 margin_right = 1135.0
 margin_bottom = 593.0
 text = "VELOCITAT"
 
-[node name="stats_actuals" type="CanvasLayer" parent="."]
+[node name="monedes" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="stats_actuals"]
-margin_left = 417.0
-margin_top = 20.0
-margin_right = 539.0
-margin_bottom = 101.0
+[node name="monedes" type="Label" parent="monedes"]
+margin_left = 240.0
+margin_top = 56.0
+margin_right = 428.0
+margin_bottom = 203.0
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 
@@ -67,12 +67,20 @@ margin_top = 611.0
 margin_right = 1133.0
 margin_bottom = 756.0
 
-[node name="Label" type="Label" parent="CanvasLayer4"]
+[node name="velocitatactual" type="Label" parent="CanvasLayer4"]
 margin_left = 1255.0
 margin_top = 532.0
 margin_right = 1525.0
 margin_bottom = 595.0
 text = "CADÈNCIA"
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+
+[node name="jugar" type="TextureButton" parent="CanvasLayer5"]
+margin_left = 1286.0
+margin_top = 81.0
+margin_right = 1519.0
+margin_bottom = 188.0
 
 [node name="1" type="Sprite" parent="."]
 position = Vector2( 806, 457 )
@@ -83,3 +91,4 @@ texture = ExtResource( 2 )
 [connection signal="pressed" from="CanvasLayer2/damage" to="." method="_on_damage_pressed"]
 [connection signal="pressed" from="CanvasLayer3/cadencia" to="." method="_on_cadencia_pressed"]
 [connection signal="pressed" from="CanvasLayer4/velocitat" to="." method="_on_velocitat_pressed"]
+[connection signal="pressed" from="CanvasLayer5/jugar" to="." method="_on_jugar_pressed"]
