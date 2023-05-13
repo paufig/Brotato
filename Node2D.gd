@@ -14,6 +14,7 @@ func _process(delta):
 	$CanvasLayer2/damageactual.text = "Damage: " + str(Global.damage)
 	$CanvasLayer3/cadenciaactual.text = "Cadència: " + str(Global.velocitat_arma)
 	$CanvasLayer4/velocitatactual.text = "Velocitat: " + str(Global.vel)
+	$CanvasLayer6/monedes.text = str(Global.gemas)
 
 func _on_TextureButton_pressed():
 	if Global.gemas >= 2:

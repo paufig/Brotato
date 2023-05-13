@@ -45,10 +45,10 @@ margin_right = 1525.0
 margin_bottom = 757.0
 
 [node name="cadenciaactual" type="Label" parent="CanvasLayer3"]
-margin_left = 876.0
-margin_top = 532.0
-margin_right = 1135.0
-margin_bottom = 593.0
+margin_left = 1251.0
+margin_top = 526.0
+margin_right = 1510.0
+margin_bottom = 587.0
 text = "VELOCITAT"
 
 [node name="monedes" type="CanvasLayer" parent="."]
@@ -68,11 +68,13 @@ margin_right = 1133.0
 margin_bottom = 756.0
 
 [node name="velocitatactual" type="Label" parent="CanvasLayer4"]
-margin_left = 1255.0
-margin_top = 532.0
-margin_right = 1525.0
-margin_bottom = 595.0
-text = "CADÈNCIA"
+margin_left = 862.0
+margin_top = 521.0
+margin_right = 1132.0
+margin_bottom = 584.0
+text = "VELOCITAT"
+align = 1
+percent_visible = -0.125
 
 [node name="CanvasLayer5" type="CanvasLayer" parent="."]
 
@@ -81,6 +83,12 @@ margin_left = 1286.0
 margin_top = 81.0
 margin_right = 1519.0
 margin_bottom = 188.0
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+
+[node name="monedes" type="Label" parent="CanvasLayer6"]
+margin_right = 40.0
+margin_bottom = 14.0
 
 [node name="1" type="Sprite" parent="."]
 position = Vector2( 806, 457 )

@@ -40,6 +40,7 @@ func _ready():
 		vegades = 9
 	if Global.nivell == 10:
 		vegades = 10
+
 func _process(delta):
 	
 	if spawn == true:
@@ -71,4 +72,4 @@ func _cooldown_finish_nivell():
 
 
 func _on_Final_nivell_timeout():
-	get_tree().change_scene("res://pantallainici.tscn")
+	get_tree().change_scene("res://shop.tscn")

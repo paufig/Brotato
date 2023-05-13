@@ -126,7 +126,8 @@ script = ExtResource( 2 )
 position = Vector2( 0, 7.62939e-06 )
 scale = Vector2( 0.909091, 0.774194 )
 frames = SubResource( 32 )
-animation = "mort"
+animation = "moviment"
+frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 33 )
