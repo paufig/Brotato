@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_Timer_timeout():
+	Global.reinicia()
 	get_tree().change_scene("res://pantallainici.tscn")

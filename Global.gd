@@ -10,3 +10,15 @@ var nivell = 1
 var gemas = 0
 var vel = 100
 var stop = false
+
+
+func reinicia():
+	max_vida = 100
+	damage = 25
+	velocitat_arma = 2
+	damage_enemics = 10
+	vida_enemics = 50
+	nivell = 1
+	gemas = 0
+	vel = 100
+	stop = false
