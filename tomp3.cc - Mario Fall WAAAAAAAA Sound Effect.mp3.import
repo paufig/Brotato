@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tomp3.cc - Mario Fall WAAAAAAAA Sound Effect.mp3-3766e27a65f29b354bf7417ee5c6feb0.mp3str"
+
+[deps]
+
+source_file="res://tomp3.cc - Mario Fall WAAAAAAAA Sound Effect.mp3"
+dest_files=[ "res://.import/tomp3.cc - Mario Fall WAAAAAAAA Sound Effect.mp3-3766e27a65f29b354bf7417ee5c6feb0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
