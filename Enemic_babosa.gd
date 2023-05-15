@@ -63,11 +63,11 @@ func mor():
 		if move.x <= 0:
 			$AnimatedSprite.flip_h = true
 			$AnimatedSprite.play("mort")
-			
+			$metalpipe.play()
 		elif move.x > 0:
 			$AnimatedSprite.flip_h = false
 			$AnimatedSprite.play("mort")
-		
+			$metalpipe.play()
 
 
 func _on_Timer_timeout():

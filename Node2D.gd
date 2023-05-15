@@ -33,8 +33,6 @@ func _on_cadencia_pressed():
 		Global.gemas -=2 
 		
 			
-
-
 func _on_velocitat_pressed():
 	if Global.gemas >= 2:
 		Global.vel += 10

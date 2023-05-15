@@ -37,6 +37,7 @@ margin_top = 523.0
 margin_right = 748.0
 margin_bottom = 591.0
 text = "DAMAGE"
+autowrap = true
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
