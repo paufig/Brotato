@@ -17,13 +17,6 @@ zoom = Vector2( 0.7, 0.58 )
 scale = Vector2( 5, 5 )
 transform = Transform2D( 5, 0, 0, 5, 0, 0 )
 
-[node name="cursor" type="Label" parent="GUI"]
-margin_left = 104.6
-margin_top = 55.0
-margin_right = 144.6
-margin_bottom = 69.0
-text = ">"
-
 [node name="jugar" type="TextureButton" parent="GUI"]
 margin_left = 151.0
 margin_top = 83.0
@@ -31,10 +24,10 @@ margin_right = 242.0
 margin_bottom = 104.0
 
 [node name="escriptori" type="TextureButton" parent="GUI"]
-margin_left = 85.0
-margin_top = 54.0
-margin_right = 142.0
-margin_bottom = 60.0
+margin_left = 146.0
+margin_top = 119.0
+margin_right = 244.0
+margin_bottom = 131.0
 
 [node name="LoadingScreenIn169WithTheTitleSproutedAndThatAtTheBottomThereIsTheToPlayAndTheOptionToExitTheGame" type="Sprite" parent="."]
 position = Vector2( 928.572, 544 )

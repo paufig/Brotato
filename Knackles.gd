@@ -31,6 +31,8 @@ func nou_nivell():
 	self.vida = Global.max_vida
 
 func _ready():
+	puede_disparar = true
+	Global.stop = false
 	nou_nivell()
 	timer = Timer.new()
 	add_child(timer)

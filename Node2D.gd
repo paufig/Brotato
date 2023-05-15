@@ -28,9 +28,11 @@ func _on_damage_pressed():
 		Global.gemas -=2
 
 func _on_cadencia_pressed():
-	if Global.gemas >= 2:
-		Global.velocitat_arma += 0.2
+	if Global.gemas >= 2 and  Global.velocitat_arma > 0.1:
+		Global.velocitat_arma -= 0.1
 		Global.gemas -=2 
+		
+			
 
 
 func _on_velocitat_pressed():
