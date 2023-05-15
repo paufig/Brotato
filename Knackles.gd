@@ -24,7 +24,7 @@ func canvi_vida(nova_vida):
 	barra_vida.value = vida
 
 func mor():
-	pass
+	get_tree().change_scene("res://Game_over.tscn")
 
 func nou_nivell():
 	barra_vida.max_value = Global.max_vida
