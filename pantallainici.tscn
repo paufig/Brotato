@@ -9,29 +9,25 @@ scale = Vector2( 1.05, 1 )
 script = ExtResource( 2 )
 scn_game = ExtResource( 3 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 539, 248 )
-zoom = Vector2( 0.7, 0.58 )
-
 [node name="GUI" type="CanvasLayer" parent="."]
 scale = Vector2( 5, 5 )
 transform = Transform2D( 5, 0, 0, 5, 0, 0 )
 
 [node name="jugar" type="TextureButton" parent="GUI"]
-margin_left = 151.0
-margin_top = 83.0
-margin_right = 242.0
-margin_bottom = 104.0
+margin_left = 147.4
+margin_top = 81.4
+margin_right = 238.4
+margin_bottom = 102.4
 
 [node name="escriptori" type="TextureButton" parent="GUI"]
-margin_left = 146.0
-margin_top = 119.0
-margin_right = 244.0
-margin_bottom = 131.0
+margin_left = 144.4
+margin_top = 118.2
+margin_right = 242.4
+margin_bottom = 130.2
 
 [node name="LoadingScreenIn169WithTheTitleSproutedAndThatAtTheBottomThereIsTheToPlayAndTheOptionToExitTheGame" type="Sprite" parent="."]
-position = Vector2( 928.572, 544 )
-scale = Vector2( 1.71958, 2.19355 )
+position = Vector2( 914.285, 540 )
+scale = Vector2( 1.69312, 2.17742 )
 texture = ExtResource( 1 )
 
 [connection signal="pressed" from="GUI/jugar" to="." method="_on_jugar_pressed"]

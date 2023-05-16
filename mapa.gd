@@ -40,6 +40,8 @@ func _ready():
 		vegades = 9
 	if Global.nivell == 10:
 		vegades = 10
+#	if Global.nivell == 11:
+#		get_tree().change_scene()
 
 func _process(delta):
 	
@@ -66,6 +68,7 @@ func _cooldown_finish_nivell():
 	Global.nivell += 1
 	for enemic in Global.Enemics.get_children():
 		enemic.mor()
+		Global.soroll = false
 	$Final_nivell.start()
 	
 

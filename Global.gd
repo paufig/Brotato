@@ -10,7 +10,7 @@ var nivell = 1
 var gemas = 0
 var vel = 100
 var stop = false
-
+var soroll = true
 
 func reinicia():
 	max_vida = 100
@@ -22,3 +22,4 @@ func reinicia():
 	gemas = 0
 	vel = 100
 	stop = false
+	soroll = true

@@ -1,104 +1,190 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Node2D.gd" type="Script" id=1]
 [ext_resource path="res://1.jpg" type="Texture" id=2]
 [ext_resource path="res://mapa.tscn" type="PackedScene" id=3]
+[ext_resource path="res://riffic/RifficFree-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 80
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 80
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 80
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 80
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 0, 2 )
 script = ExtResource( 1 )
 scn_game = ExtResource( 3 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="vida" type="TextureButton" parent="CanvasLayer"]
-margin_left = 87.0
-margin_top = 609.0
-margin_right = 362.0
-margin_bottom = 753.0
-
-[node name="vidaactual" type="Label" parent="CanvasLayer"]
-margin_left = 101.0
-margin_top = 512.0
-margin_right = 361.0
-margin_bottom = 589.0
-text = "VIDA"
+[node name="1" type="Sprite" parent="."]
+position = Vector2( 960, 538 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="damage" type="TextureButton" parent="CanvasLayer2"]
-margin_left = 474.0
-margin_top = 611.0
-margin_right = 746.0
-margin_bottom = 755.0
+margin_left = 561.0
+margin_top = 719.0
+margin_right = 886.0
+margin_bottom = 894.0
 
 [node name="damageactual" type="Label" parent="CanvasLayer2"]
-margin_left = 476.0
-margin_top = 523.0
-margin_right = 748.0
-margin_bottom = 591.0
+margin_left = 585.0
+margin_top = 610.0
+margin_right = 857.0
+margin_bottom = 678.0
+custom_fonts/font = SubResource( 2 )
 text = "DAMAGE"
+align = 1
 autowrap = true
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="cadencia" type="TextureButton" parent="CanvasLayer3"]
-margin_left = 1249.0
-margin_top = 611.0
-margin_right = 1525.0
-margin_bottom = 757.0
+[node name="vida" type="TextureButton" parent="CanvasLayer"]
+margin_left = 132.0
+margin_top = 733.0
+margin_right = 407.0
+margin_bottom = 877.0
 
-[node name="cadenciaactual" type="Label" parent="CanvasLayer3"]
-margin_left = 1251.0
-margin_top = 526.0
-margin_right = 1510.0
-margin_bottom = 587.0
-text = "VELOCITAT"
+[node name="vidaactual" type="Label" parent="CanvasLayer"]
+margin_left = 141.0
+margin_top = 610.0
+margin_right = 401.0
+margin_bottom = 687.0
+custom_fonts/font = SubResource( 1 )
+text = "VIDA"
+align = 1
 
 [node name="monedes" type="CanvasLayer" parent="."]
 
 [node name="monedes" type="Label" parent="monedes"]
-margin_left = 240.0
-margin_top = 56.0
-margin_right = 428.0
-margin_bottom = 203.0
+margin_left = 276.0
+margin_top = 88.0
+margin_right = 477.0
+margin_bottom = 212.0
+custom_fonts/font = SubResource( 4 )
+text = "5"
+align = 1
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 
 [node name="velocitat" type="TextureButton" parent="CanvasLayer4"]
-margin_left = 864.0
-margin_top = 611.0
-margin_right = 1133.0
-margin_bottom = 756.0
+margin_left = 1026.0
+margin_top = 720.0
+margin_right = 1354.0
+margin_bottom = 894.0
 
 [node name="velocitatactual" type="Label" parent="CanvasLayer4"]
-margin_left = 862.0
-margin_top = 521.0
-margin_right = 1132.0
-margin_bottom = 584.0
+margin_left = 1047.0
+margin_top = 610.0
+margin_right = 1317.0
+margin_bottom = 673.0
+custom_fonts/font = SubResource( 5 )
 text = "VELOCITAT"
+align = 1
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="cadencia" type="TextureButton" parent="CanvasLayer3"]
+margin_left = 1494.0
+margin_top = 721.0
+margin_right = 1815.0
+margin_bottom = 893.0
+
+[node name="cadenciaactual" type="Label" parent="CanvasLayer3"]
+margin_left = 1525.0
+margin_top = 610.0
+margin_right = 1784.0
+margin_bottom = 671.0
+custom_fonts/font = SubResource( 3 )
+text = "CADÈNCIA"
 align = 1
 
 [node name="CanvasLayer5" type="CanvasLayer" parent="."]
 
 [node name="jugar" type="TextureButton" parent="CanvasLayer5"]
-margin_left = 1286.0
-margin_top = 81.0
-margin_right = 1519.0
-margin_bottom = 188.0
+margin_left = 1532.0
+margin_top = 94.0
+margin_right = 1813.0
+margin_bottom = 221.0
 
-[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+[node name="CanvasLayer7" type="CanvasLayer" parent="."]
 
-[node name="monedes" type="Label" parent="CanvasLayer6"]
-margin_right = 40.0
-margin_bottom = 14.0
+[node name="monedes_vida" type="Label" parent="CanvasLayer7"]
+margin_left = 259.0
+margin_top = 757.0
+margin_right = 418.0
+margin_bottom = 878.0
+custom_fonts/font = SubResource( 6 )
+text = "1"
+align = 1
 
-[node name="1" type="Sprite" parent="."]
-position = Vector2( 806, 457 )
-scale = Vector2( 0.84, 0.846 )
-texture = ExtResource( 2 )
+[node name="CanvasLayer9" type="CanvasLayer" parent="."]
 
-[connection signal="pressed" from="CanvasLayer/vida" to="." method="_on_TextureButton_pressed"]
+[node name="monedes_cadencia" type="Label" parent="CanvasLayer9"]
+margin_left = 1645.0
+margin_top = 757.0
+margin_right = 1792.0
+margin_bottom = 877.0
+custom_fonts/font = SubResource( 8 )
+text = "1"
+align = 1
+
+[node name="CanvasLayer10" type="CanvasLayer" parent="."]
+
+[node name="monedes_vel" type="Label" parent="CanvasLayer10"]
+margin_left = 1174.0
+margin_top = 757.0
+margin_right = 1338.0
+margin_bottom = 881.0
+custom_fonts/font = SubResource( 9 )
+text = "1"
+align = 1
+
+[node name="CanvasLayer8" type="CanvasLayer" parent="."]
+
+[node name="monedes_damage" type="Label" parent="CanvasLayer8"]
+margin_left = 709.0
+margin_top = 757.0
+margin_right = 864.0
+margin_bottom = 879.0
+custom_fonts/font = SubResource( 7 )
+text = "1"
+align = 1
+
 [connection signal="pressed" from="CanvasLayer2/damage" to="." method="_on_damage_pressed"]
-[connection signal="pressed" from="CanvasLayer3/cadencia" to="." method="_on_cadencia_pressed"]
+[connection signal="pressed" from="CanvasLayer/vida" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="CanvasLayer4/velocitat" to="." method="_on_velocitat_pressed"]
+[connection signal="pressed" from="CanvasLayer3/cadencia" to="." method="_on_cadencia_pressed"]
 [connection signal="pressed" from="CanvasLayer5/jugar" to="." method="_on_jugar_pressed"]
