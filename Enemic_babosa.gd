@@ -4,7 +4,8 @@ onready var knackles = get_tree().get_root().get_node("Node2D/knackles")
 var move = Vector2()
 var vel = 50
 var vida = 50
-var stop = 0 
+var stop = 0
+var estar_mort = false
 
 func _ready():
 	if Global.nivell == 1:
@@ -69,23 +70,24 @@ func _on_Area2D_area_entered(area):
 	if area.name == "Area2D":
 		vida = vida - Global.damage
 		area.get_parent().get_parent().queue_free()
-	if vida <= 0:
+	if vida <= 0 and estar_mort == false:
 		mor()
 
 func mor():
-		stop = 1
-		$Timer.start()
-		Global.gemas += 1
-		if move.x <= 0:
-			$AnimatedSprite.flip_h = true
-			$AnimatedSprite.play("mort")
-			if Global.soroll == true:
-				$metalpipe.play()
-		elif move.x > 0:
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("mort")
-			if Global.soroll == true:
-				$metalpipe.play()
+	estar_mort = true
+	stop = 1
+	$Timer.start()
+	Global.gemas += 1
+	if move.x <= 0:
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("mort")
+		if Global.soroll == true:
+			$metalpipe.play()
+	elif move.x > 0:
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play("mort")
+		if Global.soroll == true:
+			$metalpipe.play()
 
 
 func _on_Timer_timeout():

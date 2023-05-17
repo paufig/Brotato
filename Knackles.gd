@@ -1,7 +1,8 @@
 extends KinematicBody2D
 var enemic_proper 
 onready var preBullet = preload("res://Bala.tscn")
-onready var armas = get_node("Arma")
+onready var armas = get_node("Node2D")
+onready var arma = get_node("Arma")
 var cooldown = Global.velocitat_arma
 var vel = Global.vel
 var moviment = Vector2.ZERO
@@ -69,10 +70,10 @@ func _physics_process(delta):
 			if d < distancia_enemic:
 				distancia_enemic = d
 				enemic_proper = enemic
-		
-		if enemic_proper != null:
-			armas.look_at(enemic_proper.position)
-
+				
+				if enemic_proper != null:
+					arma.look_at(enemic_proper.position)
+					armas.look_at(enemic_proper.position)
 		
 		if puede_disparar == true:
 			timer.start()

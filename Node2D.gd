@@ -10,10 +10,10 @@ func _ready():
 
 func _process(delta):
 	$monedes/monedes.text = str(Global.gemas)
-	$CanvasLayer/vidaactual.text = "Vida: " + str(Global.max_vida)
-	$CanvasLayer2/damageactual.text = "Damage: " + str(Global.damage)
-	$CanvasLayer3/cadenciaactual.text = "Cadència: " + str(Global.velocitat_arma)
-	$CanvasLayer4/velocitatactual.text = "Velocitat: " + str(Global.vel)
+	$CanvasLayer/vidaactual.text = "Vida: " + str(Global.max_vida) + (" + 5")
+	$CanvasLayer2/damageactual.text = "Damage: " + str(Global.damage) + (" + 5")
+	$CanvasLayer3/cadenciaactual.text = "Cadència: " + str(Global.velocitat_arma) + (" - 0,1")
+	$CanvasLayer4/velocitatactual.text = "Velocitat: " + str(Global.vel) + (" + 10")
 	$CanvasLayer7/monedes_vida.text = ("5")
 	$CanvasLayer8/monedes_damage.text = ("5")
 	$CanvasLayer9/monedes_cadencia.text = ("10")
@@ -29,11 +29,11 @@ func _on_TextureButton_pressed():
 	
 func _on_damage_pressed():
 	if Global.gemas >= 5:
-		Global.damage += 2
+		Global.damage += 5
 		Global.gemas -=5
 
 func _on_cadencia_pressed():
-	if Global.gemas >= 10 and  Global.velocitat_arma > 0.4:
+	if Global.gemas >= 10 and  Global.velocitat_arma > 0.2:
 		Global.velocitat_arma -= 0.1
 		Global.gemas -=10
 		

@@ -13,7 +13,7 @@ func _ready():
 
 func _on_jugar_pressed():
 	get_tree().change_scene_to(scn_game)
-	print("a")
+	
 
 func _on_escriptori_pressed():
 	get_tree().quit()

@@ -40,8 +40,8 @@ func _ready():
 		vegades = 9
 	if Global.nivell == 10:
 		vegades = 10
-#	if Global.nivell == 11:
-#		get_tree().change_scene()
+	if Global.nivell == 11:
+		get_tree().change_scene("res://Pantalla_victoria.tscn")
 
 func _process(delta):
 	

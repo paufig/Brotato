@@ -48,7 +48,6 @@ scn_game = ExtResource( 3 )
 
 [node name="1" type="Sprite" parent="."]
 position = Vector2( 960, 538 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
@@ -60,9 +59,9 @@ margin_right = 886.0
 margin_bottom = 894.0
 
 [node name="damageactual" type="Label" parent="CanvasLayer2"]
-margin_left = 585.0
+margin_left = 560.0
 margin_top = 610.0
-margin_right = 857.0
+margin_right = 885.0
 margin_bottom = 678.0
 custom_fonts/font = SubResource( 2 )
 text = "DAMAGE"
@@ -106,9 +105,9 @@ margin_right = 1354.0
 margin_bottom = 894.0
 
 [node name="velocitatactual" type="Label" parent="CanvasLayer4"]
-margin_left = 1047.0
+margin_left = 1022.0
 margin_top = 610.0
-margin_right = 1317.0
+margin_right = 1345.0
 margin_bottom = 673.0
 custom_fonts/font = SubResource( 5 )
 text = "VELOCITAT"
@@ -123,9 +122,9 @@ margin_right = 1815.0
 margin_bottom = 893.0
 
 [node name="cadenciaactual" type="Label" parent="CanvasLayer3"]
-margin_left = 1525.0
+margin_left = 1491.0
 margin_top = 610.0
-margin_right = 1784.0
+margin_right = 1812.0
 margin_bottom = 671.0
 custom_fonts/font = SubResource( 3 )
 text = "CADÈNCIA"
