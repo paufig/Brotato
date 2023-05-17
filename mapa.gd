@@ -6,7 +6,7 @@ var rand = RandomNumberGenerator.new()
 var enemyscene = load("res://Enemic_babosa.tscn")
 var timer
 var screen_size 
-var cooldown = 6
+var cooldown = 5
 var spawn = true
 var vegades = 0
 var timer_nivell
@@ -47,7 +47,7 @@ func _process(delta):
 	
 	if spawn == true:
 		timer.start()
-		vegades = vegades + 2 
+		vegades = vegades + 1
 		enemics_spawn = vegades
 		for i in range(0,enemics_spawn):
 			var enemy = enemyscene.instance()
