@@ -70,15 +70,18 @@ func _physics_process(delta):
 			if d < distancia_enemic:
 				distancia_enemic = d
 				enemic_proper = enemic
-				
-				if enemic_proper != null:
-					arma.look_at(enemic_proper.position)
-					armas.look_at(enemic_proper.position)
+			
+
+
+		if enemic_proper != null and str(Global.Enemics.get_children()) != ("[]"):
+			arma.look_at(enemic_proper.position)
+			armas.look_at(enemic_proper.position)
 		
 		if puede_disparar == true:
 			timer.start()
 			shoot()
 		
+
 func shoot():
 	var bullet = preBullet.instance()
 	get_parent().add_child(bullet)
