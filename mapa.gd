@@ -10,6 +10,7 @@ var cooldown = 5
 var spawn = true
 var vegades = 0
 var timer_nivell
+var fi = false
 
 func _ready(): 
 	timer = Timer.new()
@@ -41,7 +42,7 @@ func _ready():
 	if Global.nivell == 10:
 		vegades = 10
 	if Global.nivell == 11:
-		get_tree().change_scene("res://Pantalla_victoria.tscn")
+		fi = true
 
 func _process(delta):
 	
@@ -75,4 +76,7 @@ func _cooldown_finish_nivell():
 
 
 func _on_Final_nivell_timeout():
-	get_tree().change_scene("res://shop.tscn")
+	if fi == true:
+		get_tree().change_scene("res://Pantalla_victoria.tscn")
+	else: 
+		get_tree().change_scene("res://shop.tscn")
