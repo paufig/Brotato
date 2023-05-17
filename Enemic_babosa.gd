@@ -6,6 +6,7 @@ var vel = 50
 var vida = 50
 var stop = 0
 var estar_mort = false
+var gemas_donades = 1
 
 func _ready():
 	if Global.nivell == 1:
@@ -16,6 +17,7 @@ func _ready():
 		vel = 60
 		vida = 55
 		damage = 20
+		gemas_donades = 2
 	if Global.nivell == 3:
 		vel = 70
 		vida = 60
@@ -24,6 +26,7 @@ func _ready():
 		vel = 80
 		vida = 65
 		damage = 40
+		gemas_donades = 3
 	if Global.nivell == 5:
 		vel = 90
 		vida = 70
@@ -32,6 +35,7 @@ func _ready():
 		vel = 100
 		vida = 75
 		damage = 60
+		gemas_donades = 4
 	if Global.nivell == 7:
 		vel = 110
 		vida = 80
@@ -40,6 +44,7 @@ func _ready():
 		vel = 120
 		vida = 85
 		damage = 60
+		gemas_donades = 5
 	if Global.nivell == 9:
 		vel = 130
 		vida = 90
@@ -77,7 +82,7 @@ func mor():
 	estar_mort = true
 	stop = 1
 	$Timer.start()
-	Global.gemas += 1
+	Global.gemas += gemas_donades
 	if move.x <= 0:
 		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("mort")
