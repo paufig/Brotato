@@ -15,7 +15,7 @@ var soroll = true
 func reinicia():
 	max_vida = 100
 	damage = 25
-	velocitat_arma = 2
+	velocitat_arma = 0.7
 	damage_enemics = 10
 	vida_enemics = 50
 	nivell = 1
