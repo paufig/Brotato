@@ -15,47 +15,47 @@ func _ready():
 		damage = 10
 		gemas_donades = 1
 	if Global.nivell == 2:
-		vel = 60
+		vel = 55
 		vida = 55
 		damage = 15
 		gemas_donades = 1
 	if Global.nivell == 3:
-		vel = 70
+		vel = 60
 		vida = 60
 		damage = 20
 		gemas_donades = 1
 	if Global.nivell == 4:
-		vel = 80
+		vel = 65
 		vida = 65
 		damage = 30
 		gemas_donades = 2
 	if Global.nivell == 5:
-		vel = 90
+		vel = 70
 		vida = 70
 		damage = 40
 		gemas_donades = 2
 	if Global.nivell == 6:
-		vel = 100
+		vel = 75
 		vida = 75
 		damage = 50
 		gemas_donades = 2
 	if Global.nivell == 7:
-		vel = 110
+		vel = 80
 		vida = 80
 		damage = 60
 		gemas_donades = 2
 	if Global.nivell == 8:
-		vel = 120
+		vel = 85
 		vida = 85
 		damage = 70
 		gemas_donades = 2
 	if Global.nivell == 9:
-		vel = 130
+		vel = 90
 		vida = 90
 		damage = 60
 		gemas_donades = 2
 	if Global.nivell == 10:
-		vel = 140
+		vel = 100
 		vida = 100
 		damage = 80
 		

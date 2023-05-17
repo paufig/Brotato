@@ -41,7 +41,6 @@ func _ready():
 		vegades = 9
 	if Global.nivell == 10:
 		vegades = 10
-	if Global.nivell == 11:
 		fi = true
 
 func _process(delta):
